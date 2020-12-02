@@ -4,7 +4,7 @@ for i in range(10):
     print(i)
 
 # スタートの値を指定できる
-for i in range(2,10):
+for i in range(1,13):
     print(i)
 
 # イテレーションの値も指定できる（何個飛ばしにするか)

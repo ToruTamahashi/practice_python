@@ -14,10 +14,10 @@ import mysql.connector
 
 conn = mysql.connector.connect(
       host='localhost',
-      port='3306',
+      port='3333',
       user='root',
-      password='mysql',
-      database='python_test'
+      password='root',
+      database='mydb'
   )
 
 cursor = conn.cursor()
@@ -35,12 +35,14 @@ cursor.execute(
 cursor.execute('INSERT INTO person(name) values("Jun")')
 
 # アップデート
-cursor.execute('UPDATE person set name = "Michel" WHERE name = "Mike"')
+#cursor.execute('UPDATE person set name = "Michel" WHERE name = "Mike"')
 
 # データ検索
+'''
 cursor.execute('SELECT * FROM person')
 for row in cursor:
     print(row)
+'''
 conn.commit()
 cursor.close()
 conn.close()
